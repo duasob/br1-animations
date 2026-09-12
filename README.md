@@ -98,9 +98,25 @@ const { mix, rgba, FLOW, integrate, flowAnim } = window.__portfolioAnimUtils;
 })();
 ```
 
-## Testing locally
+## Previewing your animation
 
-The host page isn't part of this repo, but you can test your animation by serving any HTML page that loads `utils/_shared.js` first, then your animation file, then a small host script that runs the loop. The simplest check: open your animation file's logic in a scratch HTML file with a canvas, or just open a PR — review includes live testing on br1.me.
+This repo ships a small preview host (`preview.html` + `preview-host.js`) that mimics the br1.me canvas — theme colours, radial fade, sliders for your animation's `params`.
+
+1. Serve the repo folder (a server is required; `file://` won't work):
+
+```sh
+python3 -m http.server
+```
+
+2. Open the preview, pointing `?anim=` at your file (comma-separate to load several):
+
+```
+http://localhost:8000/preview.html?anim=vortex.js
+```
+
+With no `?anim=` parameter the page loads the example animations (`lorenz.js`, `field.js`, `tiles.js`), so you can also use it to explore how those work.
+
+No edits to any other file are needed — the host discovers every animation that registers itself on `window.__portfolioAnimations` and shows it as a tab.
 
 ## Ordering
 
