@@ -1,15 +1,8 @@
 # br1-animations
 
-Community-contributed canvas animations for [br1.me](https://br1.me). Each animation is a single self-contained JS file that runs on the interactive canvas on the home page. To contribute, write one file and open a PR — no build step, no bundler.
+Canvas animations for [br1.me](https://br1.me). Each animation is a single self-contained JS file that runs on the interactive canvas on the home page. Contribute your own :) 
 
-## Contributing
-
-1. Fork this repo
-2. Copy the starter template below into a new file at the repo root, e.g. `vortex.js` (next to `lorenz.js` and friends)
-3. Test locally (see [Testing locally](#testing-locally))
-4. Open a pull request
-
-Your PR will be reviewed, tried on the live site, and if accepted the animation gets integrated into br1.me. The PR will be merged (or closed) to reflect the outcome.
+You can use `preview.html` to test locally. This will render like [br1.me/a/](https://br1.me/a/)
 
 ## Interface
 
@@ -100,26 +93,4 @@ const { mix, rgba, FLOW, integrate, flowAnim } = window.__portfolioAnimUtils;
 
 ## Previewing your animation
 
-This repo ships a small preview host (`preview.html` + `preview-host.js`) that mimics the br1.me canvas — theme colours, radial fade, sliders for your animation's `params`.
-
-1. Serve the repo folder (a server is required; `file://` won't work):
-
-```sh
-python3 -m http.server
-```
-
-2. Open the preview, pointing `?anim=` at your file (comma-separate to load several):
-
-```
-http://localhost:8000/preview.html?anim=vortex.js
-```
-
-With no `?anim=` parameter the page loads the example animations (`lorenz.js`, `field.js`, `tiles.js`), so you can also use it to explore how those work.
-
-No edits to any other file are needed — the host discovers every animation that registers itself on `window.__portfolioAnimations` and shows it as a tab.
-
-The same preview is also hosted live at [br1.me/a](https://br1.me/a/) — that page always shows the animations currently integrated into the site, so use it to see accepted work, and use your local clone to iterate on your own.
-
-## Ordering
-
-Animations appear in the picker in the order they are integrated into the site.
+This repo ships a small preview host (`preview.html` + `preview-host.js`) that mimics [br1.me/a/](https://br1.me/a/)
