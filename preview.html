@@ -7,35 +7,15 @@
             preview.html?anim=your-anim.js
         (no ?anim= previews the example animations).
 
-        The theme variables below are copied from the br1.me site —
-        keep them in sync if the site palette changes.
+        Theme variables come from theme.css; on the br1.me site a one-line
+        stub imports the live site palette instead.
     -->
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>br1-animations · preview</title>
+        <link rel="stylesheet" href="theme.css" />
         <style>
-            /* ---- theme (keep in sync with br1.me css/styles.css) ---- */
-            :root {
-                --bg: #f5f3ef;
-                --surface: #eae8e3;
-                --text: #1a1a1a;
-                --secondary: #71717a;
-                --dim: #a1a1aa;
-                --accent: #9b8ab8;
-                --border: #ddd;
-            }
-
-            [data-theme="dark"] {
-                --bg: #0f0f0f;
-                --surface: #161616;
-                --text: #e8e8e8;
-                --secondary: #888888;
-                --dim: #555555;
-                --accent: #c4b4e0;
-                --border: #1e1e1e;
-            }
-
             * {
                 box-sizing: border-box;
             }

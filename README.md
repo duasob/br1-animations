@@ -118,6 +118,8 @@ With no `?anim=` parameter the page loads the example animations (`lorenz.js`, `
 
 No edits to any other file are needed — the host discovers every animation that registers itself on `window.__portfolioAnimations` and shows it as a tab.
 
+The same preview is also hosted live at [br1.me/a](https://br1.me/a/) — that page always shows the animations currently integrated into the site, so use it to see accepted work, and use your local clone to iterate on your own.
+
 ## Ordering
 
 Animations appear in the picker in the order they are integrated into the site.
